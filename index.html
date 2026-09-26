@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JULYAANAA</title>
+    <link rel="stylesheet" href="style.css">
+    
+
+<link href="[https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap](https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap)" rel="stylesheet">
+
+</head>
+<body>
+
+<header>
+  <div class="top-bar">
+    <div class="nav-links">
+      <a href="#">Home</a>
+      <a href="#">Sa'kin</a>
+      <a href="#">Sa'yo</a>
+      <a href="#">Additional</a>
+    </div>
+
+    <div class="top-bar-right">
+      <span>Para kay Yana 🐚🐚</span>
+    </div>
+  </div>
+</header>
+
+<section class="Hero-section">
+  <div class="cloud"></div>
+  <div class="cloud-2"></div>
+  <div class="cloud-3"></div>
+  
+  <div class="hero-container">
+     <div class="hero-left">
+        <img src="IMAGES/IMAGE1.jpg" alt="My Profile Picture">
+        <div class="link1">
+            <a href="#" class="hero-link">About me &rarr;</a>
+        </div>
+     </div> 
+
+     <div class="hero-right" style="align-items: flex-start; text-align: left;">
+        <h2>Hi Yana!!!</h2>
+        <p>I wrote a letter for yah! Pero siyempre, patungkol muna sa'kin para fair 'di ba? Gusto la'ng kita bigyan ng thoughts na sa side ko lang ang may alam. Isa pa, ginawa ko itong website kasi unique and siguro it is one of the skill na mayroon akong mahirap makita sa iba. Though, perchance that for some people may not see this a lot. But still, I want to express my feelings in my own totality of will. So yeah, enjoy!</p>
+     </div>
+  </div>
+
+  <div class="wave-container">
+    <svg class="custom-wave" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" preserveAspectRatio="none">
+      <path fill="#84A1C4" fill-opacity="1" d="M0,192L48,181.3C96,171,192,150,288,160C384,171,480,213,576,213.3C672,213,768,171,864,149.3C960,128,1056,128,1152,149.3C1248,171,1344,213,1392,234.6L1440,256L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+    </svg>
+  </div>
+</section>
+
+<div class="baba1">
+    <h1>Hi CRUSH!</h1>
+</div>
+
+<div class="wave-container-bottom">
+    <svg class="custom-wave" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" preserveAspectRatio="none">
+        <path fill="#A7C1E1" fill-opacity="1" d="M0,192L48,181.3C96,171,192,150,288,160C384,171,480,213,576,213.3C672,213,768,171,864,149.3C960,128,1056,128,1152,149.3C1248,171,1344,213,1392,234.6L1440,256L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+    </svg>
+</div>
+
+<section class="image-showcase">
+    <div class="image-container-wrapper">
+        <!-- The static responsive image as the background/frame -->
+        <picture class="base-image">
+            <source media="(min-width: 769px)" srcset="IMAGES/img3.jpg">
+            <img src="IMAGES/img2.jpg" alt="Custom Frame Background" class="responsive-art">
+        </picture>
+
+        <!-- The content container overlaying the image -->
+        <div class="image-slider-box">
+            <button class="slider-btn prev-btn" onclick="changeSlide(-1)">&#10094;</button>
+
+            <div class="slider-content-track">
+                <!-- Slide 1 Content -->
+                <div class="slide-content active">
+                    <h3>Sino?</h3>
+                    <p>Una sa lahat, maigting ko'ng ipinapakilala ang aking sarili. Siguro't sa hindi ay malamang kay rami ng nalalaman mo sa akin. Pero, 
+                        may mga bagay pa rin na nais ko'ng isambit. At iyon ay, maaring hindi mo pa naririnig sa iba...
+                    </p>
+                    <p>Noon pa ma'y 'di ko interes o hindi saad sa prinsipyo ko ang magkagusto sa kadahilanang maari'y isa la'ng pala itong
+                        pagaaksaya sa oras o panahon.
+                    </p>
+
+                </div>
+
+                <!-- Slide 2 Content -->
+                <div class="slide-content">
+                    <h3>Bakit?</h3>
+                    <p>U
+                    </p>
+                    <p>Noon pa ma'y 'di ko interes o hindi saad sa poras o panahon.
+                    </p>
+                </div>
+
+                <!-- Slide 3 Content -->
+                <div class="slide-content">
+                    <h3>Papaano?    </h3>
+                    <p>And a third note or message for Yana!</p>
+                </div>
+            </div>
+
+            <button class="slider-btn next-btn" onclick="changeSlide(1)">&#10095;</button>
+        </div>
+    </div>
+</section>
+
+
+
+<script>
+    let currentSlideIndex = 0;
+    const slides = document.querySelectorAll('.slide-content');
+
+    function changeSlide(direction) {
+        // Hide current slide
+        slides[currentSlideIndex].classList.remove('active');
+
+        // Calculate new index
+        currentSlideIndex += direction;
+
+        // Loop back around if at the start or end
+        if (currentSlideIndex >= slides.length) {
+            currentSlideIndex = 0;
+        }
+        if (currentSlideIndex < 0) {
+            currentSlideIndex = slides.length - 1;
+        }
+
+        // Show new slide
+        slides[currentSlideIndex].classList.add('active');
+    }
+</script>
+
+</body>
+</html>
