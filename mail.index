@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JULYAANAA</title>
+    <link rel="stylesheet" href="mail.css">
+    
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+
+</head>
+<section id="about">
+</section>
+
+<header>
+  <div class="top-bar">
+    <div class="nav-links">
+      <a href="index.html" class="home">Home</a>
+      <a href="index.html" class="sakin">Sa'kin</a>
+      <a href="index.html">Sa'yo</a>
+      <a href="#">Additional</a>
+    </div>
+
+    <div class="top-bar-right">
+      <span>Para kay Yana 🐚🐚</span>
+    </div>
+  </div>
+</header>
+
+<body>
+
+<section class="hero">
+    <div class="image-container-wrapper">
+        <picture class="base-image">
+            <source media="(min-width: 769px)" srcset="IMAGES/img4.png">
+            <img src="IMAGES/img5.png" alt="Custom Frame Background" class="responsive-art">
+        </picture>
+    </div>
+    
+    <div class="hero-content">
+        <div class="hero-left" id="yes-btn">
+            <p>yes</p>
+        </div>
+        <div class="hero-right" id="no-btn">
+            <p>no</p>
+        </div>
+    </div>
+</section>
+
+<script>
+    const noBtn = document.getElementById('no-btn');
+    const yesBtn = document.getElementById('yes-btn');
+
+    let clickCount = 0;
+
+    noBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        clickCount++;
+        
+        const isMobile = window.innerWidth <= 768;
+
+        if (isMobile) {
+            const newWidth = 30 + (clickCount * 15);
+            const newFontSize = 0.85 + (clickCount * 0.15);
+            
+            yesBtn.style.setProperty('flex', `0 0 ${newWidth}%`, 'important');
+            yesBtn.style.setProperty('max-width', `${newWidth}%`, 'important');
+            yesBtn.style.setProperty('width', `${newWidth}%`, 'important');
+            yesBtn.style.setProperty('font-size', `${newFontSize}rem`, 'important');
+        } else {
+            const newPaddingV = 10 + (clickCount * 8);
+            const newPaddingH = 220 + (clickCount * 25);
+            const newFontSize = 1 + (clickCount * 0.15);
+
+            yesBtn.style.padding = `${newPaddingV}px ${newPaddingH}px`;
+            yesBtn.style.maxWidth = `${20 + (clickCount * 40)}px`;
+            yesBtn.style.fontSize = `${newFontSize}rem`;
+        }
+        
+        yesBtn.style.transition = 'all 0.2s ease';
+    });
+
+    // What happens when they finally click "yes"
+    yesBtn.addEventListener('click', () => {
+        alert('Yey! ❤️');
+    });
+</script>
+
+</body>
+</html>
