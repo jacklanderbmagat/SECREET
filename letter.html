@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JULYAANAA</title>
+    <link rel="stylesheet" href="letter.css">
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header>
+  <div class="top-bar">
+    <div class="nav-links">
+      <a href="index.html" class="home">Home</a>
+      <a href="index.html" class="sakin">Sa'kin</a>
+      <a href="index.html" class="sayo">Sa'yo</a>
+      <a href="index.html" class="close">Additional</a>
+    </div>
+
+    <div class="top-bar-right">
+      <span>Para kay Yana 🐚🐚</span>
+    </div>
+  </div>
+</header>
+
+<section class="hero">
+    <div class="letter-content-box">
+        <div class="letter-slide active">
+            <p>Pambihira nga naman, noong araw na iyon takot din ako; kinakabahan pero may pagka-sabik. Dahil hindi naman talaga sipnayan ang hilig ko at sadiyang madali ko la'ng ito maintindihan. Noong kasagsagan ng Grade 11 natin, bagong tao at bagong lugar kaya mayroong pagkasabik na ipakilala kung sino ako at anong mayroon sa akin. Kaya madalas o parati ay nakikilahok ako sa gawaing pang-akademiko. Lingid sa kaalaman mo ay mas gusto ko talaga ang aspeto ng agham kaysa sipnayan. Ngunit dumating ang panahon at nagkaroon ng kaganapan at mangyaring naging abala ang mga guro pati na rin si ma'am cess. Ngayon ay, sa dami ng ginagawa ninais niyang maghanap ng tatayong guro upang magturo dahil nga ay abala sa kaganapang pang-eskuwelahan. Ako naman itong sabik upang maki-partisipa dahil nga ay may ipinangako rin na gantimpala ang guro. Kahit na alam ko'ng hindi ko hilig ngunit sumama parin ako, nagkataong walang nakipartisipa sa baitan niyo at gayundin na apat ang lumahok sa amin. Dahil may sumobra, isang magkasosyo ang naatasan sa ibang section, at kami iyon.</p>
+        </div>
+
+        <div class="letter-slide">
+            <p>Makalipas ang isang araw, at nalalapit na rin ang panahon. Hindi na ako makapag-isip dahil nga ay kinakabahan, kung sa marami'y i-isiping ang pagtuturo ay isang madaling gawain. Pero para sa akin ay hindi, bagkus ay isa nga ito sa mga bagay na hindi ko talaga hilig sa kadahilanang hirap din ako makipag-usap sa kahit ni sinong tao. Dumating ang dabi at kinabukasan ay iyon na ang araw, kung gayon ay buong gabi kong ginugol ang sarili para aralin ang ibinigay na talakayan. Isa rin sa iniisip ko'y ang magiging kahihinatnat ng pangyayari kaya dumagdag pa ito sa bigat ng bugso. Unang paksa ang sipnayan kaya pagpasok ay wala na ring oras para makapag-pahinga kaya nung dumating ang oras mayroong kaba. Ngunit, hindi ko akalain na bumibilis ang oras kapag masiyado kang abala sa ginagawa at mangyaring namalayan ko'y patapos na ang pagtuturo ko sa seksyon niyo.</p>
+        </div>
+
+        <div class="letter-slide">
+            <p>Isa sa pinaka napansin ko'y ikaw, lingid sa kaalaman mo'y kakaunti lamang ang lumalahok lalo sa mga mahihirap na tanong. Sa panahong iyon, tanging kamay mo at isang nasa likod ang nakikita kong tumataas. Isa pa, nasa unahan ka kung kaya't mapapansin at mapapansin kita. Isang bagay na hinahangaan ko ay sa kahit sinong tao na madaling makaintindi ng sipnayan. At saktong nakakita ako ng isa at <u>ikaw iyon</u>. Ngunit, wala rin naman akong lakas ng loob para kilalanin ka at maging kaibigan kaya't akala ko roon na matatapos ang lahat. Ngunit, isang araw lamang ang lumipas at nakita kong in-add mo ako sa fb. Mayroong tanong sa'kin sa kung pa-paanong nakita mo <u>ang social media account ko</u>. At doon na nagsimula ang lahat, sino bang mag-aakalang mangyayari iyon at sinong aakalain na hahantong ang mga iyon sa kung anong mayroon sa atin ngayon.</p>
+        </div>
+
+        <div class="mobile-slider-nav">
+            <button id="letter-prev-btn" class="letter-nav-btn">Prev</button>
+            <span id="letter-page-indicator">1 / 3</span>
+            <button id="letter-next-btn" class="letter-nav-btn">Next</button>
+        </div>
+    </div>
+</section>
+
+<script>
+    const slides = document.querySelectorAll('.letter-slide');
+    const prevBtn = document.getElementById('letter-prev-btn');
+    const nextBtn = document.getElementById('letter-next-btn');
+    const pageIndicator = document.getElementById('letter-page-indicator');
+    
+    let currentSlide = 0;
+
+    function updateSlider() {
+        slides.forEach((slide, index) => {
+            if (index === currentSlide) {
+                slide.classList.add('active');
+            } else {
+                slide.classList.remove('active');
+            }
+        });
+        pageIndicator.textContent = `${currentSlide + 1} / ${slides.length}`;
+    }
+
+    nextBtn.addEventListener('click', () => {
+        if (currentSlide < slides.length - 1) {
+            currentSlide++;
+            updateSlider();
+        }
+    });
+
+    prevBtn.addEventListener('click', () => {
+        if (currentSlide > 0) {
+            currentSlide--;
+            updateSlider();
+        }
+    });
+</script>
+
+</body>
+</html>
